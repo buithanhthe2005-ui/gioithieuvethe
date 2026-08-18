@@ -565,6 +565,233 @@
             font-size: 14px;
         }
 
+
+        /* ==============================
+           WEBSITE SINH VIÊN
+        ============================== */
+
+        .website-manager {
+            margin-top: 20px;
+        }
+
+        .website-panel {
+            background: rgba(255,255,255,0.96);
+            color: #123b6d;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #dbe5f0;
+            box-shadow: 0 18px 50px rgba(0,0,0,0.20);
+        }
+
+        .website-panel h3 {
+            font-size: 28px;
+            margin-bottom: 22px;
+            color: #123b6d;
+        }
+
+        .website-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .website-form input {
+            width: 100%;
+            height: 60px;
+            padding: 0 20px;
+            border: 1px solid #d5dfeb;
+            border-radius: 15px;
+            outline: none;
+            font-size: 16px;
+            color: #24415f;
+            background: #fff;
+            transition: 0.25s;
+        }
+
+        .website-form input:focus {
+            border-color: #2b6cb0;
+            box-shadow: 0 0 0 4px rgba(43,108,176,0.10);
+        }
+
+        .website-form button {
+            height: 60px;
+            border: none;
+            border-radius: 15px;
+            padding: 0 28px;
+            background: #123f73;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.25s;
+            white-space: nowrap;
+        }
+
+        .website-form button:hover {
+            background: #0c315b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(18,63,115,0.25);
+        }
+
+        .website-message {
+            min-height: 25px;
+            margin-top: 15px;
+            color: #07883f;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .website-list {
+            margin-top: 10px;
+            border-top: 1px solid #e4e9ef;
+        }
+
+        .website-item {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: center;
+            padding: 22px 0;
+            border-bottom: 1px solid #e4e9ef;
+        }
+
+        .website-info {
+            min-width: 0;
+        }
+
+        .website-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #123f73;
+            margin-bottom: 7px;
+        }
+
+        .website-url {
+            color: #006bc7;
+            font-size: 16px;
+            word-break: break-all;
+        }
+
+        .website-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .website-actions button,
+        .website-actions a {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 18px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .btn-open-website {
+            background: #eaf4fc;
+            color: #07528f;
+        }
+
+        .btn-edit-website {
+            background: #fff4d9;
+            color: #a56800;
+        }
+
+        .btn-delete-website {
+            background: #fdebec;
+            color: #d71919;
+        }
+
+        .website-actions button:hover,
+        .website-actions a:hover {
+            transform: translateY(-2px);
+            filter: brightness(0.97);
+        }
+
+        .empty-websites {
+            padding: 35px 10px;
+            text-align: center;
+            color: #7b8795;
+        }
+
+        .edit-badge {
+            display: none;
+            margin-left: 8px;
+            padding: 4px 9px;
+            border-radius: 20px;
+            background: #e9f2ff;
+            color: #2469a9;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
+        .website-panel.editing .edit-badge {
+            display: inline-block;
+        }
+
+        .website-panel.editing h3::after {
+            content: " — đang sửa";
+            color: #a56800;
+            font-size: 15px;
+        }
+
+        .cancel-edit {
+            display: none;
+            height: 60px;
+            padding: 0 20px;
+            border: 1px solid #d7e0ea;
+            border-radius: 15px;
+            background: #f6f8fa;
+            color: #496176;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .website-panel.editing .cancel-edit {
+            display: block;
+        }
+
+        .website-panel.editing .website-form {
+            grid-template-columns: 1fr 1fr auto auto;
+        }
+
+        @media(max-width: 800px) {
+            .website-form,
+            .website-panel.editing .website-form {
+                grid-template-columns: 1fr;
+            }
+
+            .website-form button,
+            .cancel-edit {
+                width: 100%;
+            }
+
+            .website-item {
+                grid-template-columns: 1fr;
+            }
+
+            .website-actions {
+                flex-wrap: wrap;
+            }
+
+            .website-actions button,
+            .website-actions a {
+                flex: 1;
+            }
+
+            .website-panel {
+                padding: 20px;
+            }
+        }
+
         /* ==============================
            RESPONSIVE
         ============================== */
@@ -623,6 +850,7 @@
             <li><a href="#home">Trang chủ</a></li>
             <li><a href="#about">Giới thiệu</a></li>
             <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#websites">Website</a></li>
             <li><a href="#contact">Liên hệ</a></li>
         </ul>
 
@@ -882,6 +1110,67 @@
     </section>
 
 
+
+    <!-- ==============================
+         WEBSITE SINH VIÊN
+    ============================== -->
+
+    <section id="websites">
+
+        <div class="section-title">
+            <span>Student Websites</span>
+            <h2>Website của sinh viên</h2>
+            <p>Thêm, xem, chỉnh sửa hoặc xóa website trong danh sách chung.</p>
+        </div>
+
+        <div class="website-manager">
+            <div class="website-panel" id="websitePanel">
+
+                <h3>
+                    <i class="fa-solid fa-globe"></i>
+                    Website của sinh viên
+                    <span class="edit-badge">Chỉnh sửa</span>
+                </h3>
+
+                <form class="website-form" id="websiteForm">
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Tên sinh viên"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <input
+                        type="url"
+                        id="studentWebsite"
+                        placeholder="https://tenwebsite-cua-ban.com"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="submitWebsite">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Thêm website</span>
+                    </button>
+
+                    <button type="button" class="cancel-edit" id="cancelEdit">
+                        Hủy sửa
+                    </button>
+
+                </form>
+
+                <div class="website-message" id="websiteMessage"></div>
+
+                <div class="website-list" id="websiteList"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+
     <!-- ==============================
          CONTACT
     ============================== -->
@@ -956,6 +1245,290 @@
     </p>
 
 </footer>
+
+<script>
+    /* =========================================
+       QUẢN LÝ WEBSITE SINH VIÊN
+       - Thêm
+       - Mở website
+       - Sửa
+       - Xóa
+       - Lưu bằng localStorage
+    ========================================= */
+
+    const websiteForm = document.getElementById("websiteForm");
+    const studentName = document.getElementById("studentName");
+    const studentWebsite = document.getElementById("studentWebsite");
+    const websiteList = document.getElementById("websiteList");
+    const websiteMessage = document.getElementById("websiteMessage");
+    const websitePanel = document.getElementById("websitePanel");
+    const submitWebsite = document.getElementById("submitWebsite");
+    const cancelEdit = document.getElementById("cancelEdit");
+
+    let websites = JSON.parse(localStorage.getItem("studentWebsites")) || [
+        {
+            id: 1,
+            name: "Phạm Duy Hào",
+            url: "https://haocntkt124-ugjh.vercel.app/"
+        },
+        {
+            id: 2,
+            name: "Nguyen Thành Hưng",
+            url: "https://my-full-hpg2h1o0f-nguyenthunghxz-7322s-projects.vercel.app/"
+        },
+        {
+            id: 3,
+            name: "Lâm Lưu Hoàng Phúc",
+            url: "https://lam-luu-hoang-phuc-portfolio.vercel.app/"
+        },
+        {
+            id: 4,
+            name: "Nguyễn Tất Đạt",
+            url: "https://datcntt1k24dhhp.vercel.app/"
+        }
+    ];
+
+    let editingId = null;
+
+    function saveWebsites() {
+        localStorage.setItem("studentWebsites", JSON.stringify(websites));
+    }
+
+    function showMessage(message, type = "success") {
+        websiteMessage.textContent = message;
+
+        if (type === "error") {
+            websiteMessage.style.color = "#d71919";
+        } else {
+            websiteMessage.style.color = "#07883f";
+        }
+
+        setTimeout(() => {
+            websiteMessage.textContent = "";
+        }, 3000);
+    }
+
+    function normalizeUrl(url) {
+        url = url.trim();
+
+        if (!/^https?:\/\//i.test(url)) {
+            url = "https://" + url;
+        }
+
+        return url;
+    }
+
+    function renderWebsites() {
+
+        websiteList.innerHTML = "";
+
+        if (websites.length === 0) {
+            websiteList.innerHTML = `
+                <div class="empty-websites">
+                    <i class="fa-solid fa-globe fa-2x"></i>
+                    <p style="margin-top:10px;">Chưa có website nào trong danh sách.</p>
+                </div>
+            `;
+            return;
+        }
+
+        websites.forEach((website) => {
+
+            const item = document.createElement("div");
+            item.className = "website-item";
+
+            item.innerHTML = `
+                <div class="website-info">
+                    <div class="website-name">
+                        ${escapeHTML(website.name)}
+                    </div>
+
+                    <a
+                        class="website-url"
+                        href="${escapeAttribute(website.url)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ${escapeHTML(website.url)}
+                    </a>
+                </div>
+
+                <div class="website-actions">
+
+                    <a
+                        class="btn-open-website"
+                        href="${escapeAttribute(website.url)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Mở website
+                    </a>
+
+                    <button
+                        type="button"
+                        class="btn-edit-website"
+                        onclick="editWebsite(${website.id})"
+                    >
+                        <i class="fa-solid fa-pen"></i>
+                        Sửa
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-delete-website"
+                        onclick="deleteWebsite(${website.id})"
+                    >
+                        <i class="fa-solid fa-trash"></i>
+                        Xóa
+                    </button>
+
+                </div>
+            `;
+
+            websiteList.appendChild(item);
+        });
+    }
+
+    function escapeHTML(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function escapeAttribute(value) {
+        return escapeHTML(value);
+    }
+
+    websiteForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = studentName.value.trim();
+        const url = normalizeUrl(studentWebsite.value);
+
+        if (!name || !url) {
+            showMessage("Vui lòng nhập đầy đủ thông tin.", "error");
+            return;
+        }
+
+        try {
+            new URL(url);
+        } catch {
+            showMessage("Đường dẫn website không hợp lệ.", "error");
+            return;
+        }
+
+        if (editingId !== null) {
+
+            const website = websites.find(item => item.id === editingId);
+
+            if (website) {
+                website.name = name;
+                website.url = url;
+            }
+
+            saveWebsites();
+            renderWebsites();
+
+            showMessage("Đã cập nhật website thành công.");
+
+            resetForm();
+
+        } else {
+
+            const newWebsite = {
+                id: Date.now(),
+                name: name,
+                url: url
+            };
+
+            websites.push(newWebsite);
+
+            saveWebsites();
+            renderWebsites();
+
+            showMessage("Đã thêm website vào danh sách chung.");
+
+            websiteForm.reset();
+            studentName.focus();
+        }
+    });
+
+    function editWebsite(id) {
+
+        const website = websites.find(item => item.id === id);
+
+        if (!website) return;
+
+        editingId = id;
+
+        studentName.value = website.name;
+        studentWebsite.value = website.url;
+
+        submitWebsite.innerHTML = `
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span>Lưu thay đổi</span>
+        `;
+
+        websitePanel.classList.add("editing");
+
+        document.getElementById("websites").scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        studentName.focus();
+    }
+
+    function deleteWebsite(id) {
+
+        const website = websites.find(item => item.id === id);
+
+        if (!website) return;
+
+        const confirmed = confirm(
+            `Bạn có chắc muốn xóa website của "${website.name}" không?`
+        );
+
+        if (!confirmed) return;
+
+        websites = websites.filter(item => item.id !== id);
+
+        saveWebsites();
+        renderWebsites();
+
+        if (editingId === id) {
+            resetForm();
+        }
+
+        showMessage("Đã xóa website khỏi danh sách.");
+    }
+
+    function resetForm() {
+
+        editingId = null;
+
+        websiteForm.reset();
+
+        submitWebsite.innerHTML = `
+            <i class="fa-solid fa-plus"></i>
+            <span>Thêm website</span>
+        `;
+
+        websitePanel.classList.remove("editing");
+    }
+
+    cancelEdit.addEventListener("click", function() {
+        resetForm();
+        studentName.focus();
+    });
+
+    renderWebsites();
+</script>
 
 </body>
 </html>
